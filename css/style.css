@@ -1,17 +1,17 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 
-.site{
+.site {
     margin: 0 auto;
     max-width: 1200px;
     width: 100%;
 }
 
 
-.imagem_fundo{
+.imagem_fundo {
 
     background-image: url(../material_do_site/img/hero_slider_bg_1.png);
     height: 1000px;
@@ -20,21 +20,21 @@
     background-size: cover;
 }
 
-.imagem_fundo header{
-  
+.imagem_fundo header {
+
     display: flex;
     flex-flow: row wrap;
     height: 95px;
     background: transparent;
     color: #fff;
     backdrop-filter: blur(10px);
-    border-bottom: 3px solid #ffffff3a ;
-  
+    border-bottom: 3px solid #ffffff3a;
+
 
 
 }
 
-.imagem_fundo header .site{
+.imagem_fundo header .site {
     margin: 0 auto;
     max-width: 1200px;
     width: 100%;
@@ -43,14 +43,14 @@
     justify-content: space-between;
 }
 
-.imagem_fundo header nav ul{
+.imagem_fundo header nav ul {
     display: flex;
-    flex-flow:  row wrap;
-    
+    flex-flow: row wrap;
+
 
 }
 
-.imagem_fundo header nav ul li a{
+.imagem_fundo header nav ul li a {
     color: white;
     margin-right: 40px;
     font-size: 16pt;
@@ -59,13 +59,13 @@
 
 
 
-.imagem_fundo header .telefone{
+.imagem_fundo header .telefone {
     display: flex;
     align-items: center;
     flex-flow: row wrap;
 }
 
-.imagem_fundo header .circulo_um {
+.imagem_fundo header .circulo_um , .servicos  .site .servicos_container .servico_um .circulo_um {
     height: 60px;
     border-radius: 50%;
     background: #F43B22;
@@ -76,68 +76,72 @@
     align-items: center;
 }
 
-.imagem_fundo header .circulo_um  .fa-solid {
-font-size: 26px;
+.imagem_fundo header .circulo_um .fa-solid {
+    font-size: 26px;
 
 }
 
-.imagem_fundo header .telefone .numero h2{
+.imagem_fundo header .telefone .numero h2 {
     margin-left: 20px;
     font-weight: 900;
     font-size: 19pt;
 }
 
 
-.local{
+.local {
     padding-top: 50px;
 }
 
 
-.local .site  .container_local{
+.local .site .container_local {
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
 
- .local .site .camadas{
-height: 60px;
-width: 60px;
-border-radius: 50%;
-background-color: #822112;
-display: flex;
-justify-content: center;
-align-items: center;
+.local .site .camadas {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: #822112;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.local .site .camadas img{
+
+.local .site .camadas img {
     z-index: 999;
 }
 
-.local .site .camadas::before,  .local .site .camadas::after{
+.local .site .camadas::before,
+.local .site .camadas::after {
 
     content: "";
     position: absolute;
     border-radius: 50%;
 }
 
-.local .site .camadas::before{
+.local .site .camadas::before {
     width: 80px;
     height: 80px;
-    background: rgba(192, 57, 43, 0.4); /* Cor da camada externa */
+    background: rgba(192, 57, 43, 0.4);
+    /* Cor da camada externa */
 }
 
-.local .site .camadas::after{
+.local .site .camadas::after {
 
 
     width: 100px;
     height: 100px;
-    background: rgba(192, 57, 43, 0.2); /* Cor da segunda camada */
+    background: rgba(192, 57, 43, 0.2);
+    /* Cor da segunda camada */
 
 
 
 }
 
-.local .site div .fa-regular{
+.local .site div .fa-regular {
 
     font-size: 22pt;
     color: white;
@@ -147,7 +151,182 @@ align-items: center;
 
 
 
-.local .site  .container_local .texto_email_local_data h2{
+.local .site .container_local .texto_email_local_data h2 {
     color: white;
     font-size: 17pt;
+}
+
+
+
+.informacoes {
+    padding-top: 50px;
+
+
+}
+
+
+.informacoes .site .redes_socias {
+    position: relative;
+    gap: 10px;
+    top: 50%;
+    left: -335px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-top: 100px;
+    height: 200px;
+
+}
+
+.informacoes .site .redes_socias img {
+    height: 24px;
+    width: 24px;
+    margin-left: 50px;
+
+    align-self: flex-start;
+}
+
+.informacoes .site .redes_socias h3 {
+    width: auto;
+    color: white;
+    transform: rotate(-90deg);
+    margin-top: 122px;
+    margin-left: 13px;
+    align-self: flex-start;
+    text-align: start;
+    font-weight: bold;
+    font-size: 13pt;
+}
+
+
+.informacoes .site .redes_socias hr {
+    width: 11%;
+    transform: rotate(-90deg);
+    margin-top: 90px;
+    align-self: flex-start;
+}
+
+
+.informacoes .site .car-service {
+    width: 60%;
+}
+
+.informacoes .site .car-service h2 {
+    font-size: 50pt;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.informacoes .site .car-service p {
+    font-size: 15pt;
+    font-weight: 100;
+    color: #ffffffc2;
+    line-height: 30px;
+    margin-bottom: 50px;
+}
+
+
+.informacoes .site .car-service a {
+
+    color: white;
+    font-weight: bold;
+    width: 200px;
+    height: 60px;
+    background-color: #FF3D24;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+
+.number{
+    padding-top: 50px;
+    background: #101010;
+    padding-bottom: 50px;
+
+}
+
+
+.number .site .numeros{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+
+.number .site .numeros div{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.number .site .numeros div .hr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    flex-flow: column wrap;
+}
+
+.number .site .numeros div .hr hr{
+   width: 300px;
+}
+
+.number .site .numeros  div p {
+    color: #000000;
+    font-size: 25pt;
+    -webkit-text-stroke: 1px white;
+  
+}
+
+
+.servicos{
+    
+    background: #101010;
+    
+}
+
+.servicos .site .servicos_container{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+
+.servicos .site .servicos_container .servico_um{
+
+width: 370px;
+height: 280px;
+background: #000000;
+display: flex;
+justify-content: center;
+flex-flow: column wrap;
+align-items: center;
+
+}
+
+
+.servicos .site .servicos_container .servico_um  .texto{
+    width: 83%;
+}
+
+
+.servicos .site .servicos_container .servico_um .texto h4,.servicos .site .servicos_container .servico_um  .texto p{
+    color: white;
+    text-align: center;
+    margin: 10px  0;
+}
+
+.servicos .site .servicos_container .servico_um .texto h4{
+
+    font-size: 20pt;
+}
+
+
+.servicos .site .servicos_container .servico_um  .texto p{
+font-size: 13pt;
+color: rgba(255, 255, 255, 0.788);
+line-height: 25px;
 }
