@@ -7,7 +7,7 @@
     --cor_branco_texto: #ffffff;
     --cor_card_img:#0A0A0A;
     --cor_preto_para_texto: ;
-}
+    }
 
 
 * {
@@ -367,7 +367,7 @@
 }
 
 .descricao .site .background-text,
-.servicos .background-text {
+.servicos .background-text , .carrosel_avaliaçoes .site .background-text {
     color: white;
     width: 50%;
     position: relative;
@@ -375,7 +375,7 @@
 
 
 .descricao .site .background-text::before,
-.servicos .background-text::before {
+.servicos .background-text::before, .carrosel_avaliaçoes .site .background-text::before {
     content: "FEATURE";
     position: absolute;
     left: 0px;
@@ -391,7 +391,7 @@
 }
 
 .descricao .site .background-text h5,
-.servicos .background-text h5 {
+.servicos .background-text h5, .carrosel_avaliaçoes .site .background-text h5 {
     font-size: 30pt;
     z-index: 1;
     position: relative;
@@ -673,4 +673,57 @@
 .carrosel_parceiros .site .carrosel{
 display: flex;
 justify-content: space-between;
+}
+
+
+.carrosel_avaliaçoes{
+    padding:50px 0 ;
+    background-color: var(--cor_de_fundo);
+}
+
+.carrosel_avaliaçoes .site .clientes{
+    background-color: var(--cor_vermelho_paleta);
+    height: 500px;
+}
+
+.carrosel_avaliaçoes .site .background-text::before{
+    content: " AVALIAÇÕES ";
+}
+
+.carrosel_avaliaçoes .site .background-text{
+    margin-bottom: 75px;
+}
+
+.carrosel_avaliaçoes .site .clientes{
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.carrosel_avaliaçoes .site .clientes .avl{
+    width: 40%;
+}
+
+.carrosel_avaliaçoes .site .clientes .avl div:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carrosel_avaliaçoes .site .clientes .avl div:nth-child(1) h3{
+
+    font-size: 24px;
+    color: var(--cor_branco_texto);
+    font-weight: 700;
+    line-height: normal;
+    font-style: normal;
+  
+    
+}
+
+.carrosel_avaliaçoes .site .clientes .avl div:nth-child(1) .fa-solid{
+
+
+    font-size: 70pt;
+    color: var(--cor_card_img);
 }
