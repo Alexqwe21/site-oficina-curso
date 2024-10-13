@@ -972,9 +972,18 @@ footer .informacoes_footer{
     background-color: var(--cor_card_img);
 }
 
+footer .informacoes_footer .site{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+footer .informacoes_footer .logo_footer{
+    width: 40%;
+}
 
 footer .informacoes_footer .logo_footer div:nth-child(1){
-    width: 40%;
+    width: 100%;
 }
 
 
@@ -1006,4 +1015,58 @@ font-size: 30pt;
 color: var(--cor_branco_texto);
 font-weight: bold;
 margin-left: 20px;
+}
+
+
+footer .informacoes_footer .site nav h4, footer .informacoes_footer .site .localizacao_footer h4  {
+    color: var(--cor_branco_texto);
+    font-size: 20pt;
+}
+
+
+footer .informacoes_footer .site nav ul li{
+    margin: 20px 0 ;
+}
+
+footer .informacoes_footer .site nav ul li a {
+    color: var(--cor_branco_texto);
+}
+
+
+footer .informacoes_footer  .site .localizacao_footer .contato_footer{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+footer .informacoes_footer .site .localizacao_footer h4{
+    margin: 0 0 20px 0 ;
+}
+
+footer .informacoes_footer  .site .localizacao_footer .contato_footer p{
+    color: var(--cor_branco_texto);
+    font-size: 10pt;
+    
+    margin-left: 10px ;
+   
+}
+
+footer .hr .site  hr{
+    margin-bottom: 20px;
+}
+
+footer .hr .site .redes_footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .hr .site .redes_footer h2{
+    font-size: 15pt;
+    font-weight: bold;
+    color: var(--cor_branco_texto);
+}
+
+footer .hr .site .redes_footer div a{
+   
+    margin-left: 10px;
 }
