@@ -2,6 +2,31 @@ body {
     background-color: var(--cor_de_fundo);
 }
 
+
+
+@font-face {
+    font-family: 'PACE';
+    src: url(../material_do_site/fonts/pace-racing-car/PACE-Italic.woff2) format('woff2'),
+        url(../material_do_site/fonts/pace-racing-car/PACE-Italic.woff) format('woff'),
+        url(../material_do_site/fonts/pace-racing-car/PACE-Italic.ttf) format('truetype'),
+        url(../material_do_site/fonts/pace-racing-car/PACE-Italic.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Sofast';
+    src: url(../material_do_site/fonts/sofast-racing-car/Sofast-Regular/Sofast.woff2) format('woff2'),
+        url(../material_do_site/fonts/sofast-racing-car/Sofast-Regular/Sofast.woff) format('woff'),
+        url(../material_do_site/fonts/sofast-racing-car/Sofast-Regular/Sofast.ttf) format('truetype'),
+        url(../material_do_site/fonts/sofast-racing-car/Sofast-Regular/Sofast.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 :root {
     --cor_de_fundo: #101010;
     ;
@@ -12,6 +37,11 @@ body {
     --cor_card_img: #0A0A0A;
     --cor_preto_para_texto: ;
     --cor_hr_footer: #260906;
+    --cor_dos_icones: rgb(212, 130, 1);
+    --cor_amarelo: #ffff00;
+    --texto_PACE: 'PACE';
+    --fontNoCorpo:"Sofast" ; 
+    --texto_PACE_italico: 'PACE Italic' ;
 }
 
 
@@ -27,14 +57,14 @@ body {
     width: 100%;
 }
 
-/* .video{
-    margin: 0 auto;
-    max-width: 1900px;
-    width: 100%;
-} */
 
+/* imagens dos carrosel de fundo  */
 
- .banner_um {
+.banner_um,
+.banner_dois,
+.banner_tres,
+.banner_quatro,
+.banner_cinco {
 
     background-image: url(../material_do_site/img/hero_slider_bg_1.png);
     height: 1000px;
@@ -44,20 +74,31 @@ body {
 }
 
 
-/* imagens dos carrosel de fundo  */
 
-.banner_dois{
-    background-image: url(../material_do_site/img/hero_slider_bg_2.png) ;
-    height: 1000px;
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
-    
+
+.banner_dois {
+    background-image: url(../material_do_site/img/hero_slider_bg_2.png);
+
+
 }
 
-/* .banner_dois{
+
+.banner_tres {
     background-image: url(../material_do_site/img/hero_three_slider_bg_1.png);
-} */
+
+
+}
+
+.banner_quatro {
+
+    background-image: url(../material_do_site/img/hero_two_slider_bg_1.png);
+}
+
+
+.banner_cinco {
+    background-image: url(../material_do_site/img/hero_two_slider_bg_2.png);
+}
+
 
 
 
@@ -78,6 +119,11 @@ body {
 
 }
 
+header img {
+    width: 150px;
+    height: 100px;
+}
+
 .imagem_fundo header .site {
     margin: 0 auto;
     max-width: 1200px;
@@ -90,15 +136,18 @@ body {
 .imagem_fundo header nav ul {
     display: flex;
     flex-flow: row wrap;
+    font-family: sofast;
 
 
 }
 
 .imagem_fundo header nav ul li a {
     color: white;
-    margin-right: 40px;
+    margin-left: 20px;
     font-size: 16pt;
     font-weight: 500;
+    font-family: var(--fontNoCorpo);
+   
 }
 
 
@@ -113,13 +162,68 @@ body {
 .servicos .site .servicos_container .servico_um .circulo_um {
     height: 60px;
     border-radius: 50%;
-    background: #F43B22;
+    background-color: var(--cor_dos_icones);
     width: 60px;
-    border: 5px solid #923625;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
+
+.imagem_fundo header .circulo_um {
+    margin-right: 13px;
+}
+
+.imagem_fundo header .circulo_um::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: rgb(212, 130, 1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: anima 1.5s infinite;
+    z-index: -1;
+}
+
+.servicos .site .servicos_container .servico_um .circulo_um::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    background: rgb(212, 130, 1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: 1.5s ease 0s infinite normal none running anima;
+    margin-left: 101px;
+
+
+}
+
+
+
+
+@keyframes anima {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+
+}
+
 
 .imagem_fundo header .circulo_um .fa-solid {
     font-size: 26px;
@@ -127,9 +231,10 @@ body {
 }
 
 .imagem_fundo header .telefone .numero h2 {
-    margin-left: 20px;
+  
     font-weight: 900;
-    font-size: 19pt;
+    font-size: 17pt;
+    font-family: var(--texto_PACE);
 }
 
 
@@ -149,7 +254,7 @@ body {
     height: 60px;
     width: 60px;
     border-radius: 50%;
-    background-color: #822112;
+    background-color: var(--cor_dos_icones);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -170,7 +275,7 @@ body {
 .local .site .camadas::before {
     width: 80px;
     height: 80px;
-    background: rgba(192, 57, 43, 0.4);
+    background: rgba(212, 130, 1, 0.3);
     /* Cor da camada externa */
 }
 
@@ -179,12 +284,17 @@ body {
 
     width: 100px;
     height: 100px;
-    background: rgba(192, 57, 43, 0.2);
-    /* Cor da segunda camada */
-
+    background: rgba(212, 130, 1, 0.1);
 
 
 }
+
+
+/* Cor da segunda camada */
+
+
+
+
 
 .local .site div .fa-regular {
 
@@ -198,7 +308,9 @@ body {
 
 .local .site .container_local .texto_email_local_data h2 {
     color: white;
-    font-size: 17pt;
+    font-size: 10pt;
+    font-family: var(--texto_PACE);
+  
 }
 
 
@@ -223,12 +335,20 @@ body {
 
 }
 
-.informacoes .site .redes_socias img {
+
+
+.informacoes .site .redes_socias .fa-brands:hover {
+    color: #ffff00;
+}
+
+.informacoes .site .redes_socias .fa-brands {
     height: 24px;
     width: 24px;
     margin-left: 50px;
-
     align-self: flex-start;
+    transform: rotate(-90deg);
+    font-size: 15pt;
+    color: var(--cor_branco_texto);
 }
 
 .informacoes .site .redes_socias h3 {
@@ -236,7 +356,7 @@ body {
     color: white;
     transform: rotate(-90deg);
     margin-top: 122px;
-    margin-left: 13px;
+    margin-left: 26px;
     align-self: flex-start;
     text-align: start;
     font-weight: bold;
@@ -249,6 +369,7 @@ body {
     transform: rotate(-90deg);
     margin-top: 90px;
     align-self: flex-start;
+    border: 1px solid var(--cor_dos_icones);
 }
 
 
@@ -261,6 +382,8 @@ body {
     font-weight: bold;
     color: white;
     margin-bottom: 15px;
+   font-family: var(--texto_PACE);
+   font-style: italic;
 }
 
 .informacoes .site .car-service p {
@@ -275,16 +398,29 @@ body {
 .informacoes .site .car-service a,
 .descricao .site .background-text a {
 
-    color: white;
+    color: #4b4b4b;
     font-weight: bold;
     width: 200px;
     height: 60px;
-    background-color: #FF3D24;
+    background-color: var(--cor_amarelo);
     display: flex;
     align-items: center;
     justify-content: center;
 
 
+}
+
+.informacoes .site .car-service a {
+    transition: transform 0.3s ease-in-out;
+    /* Suaviza tanto na ida quanto na volta */
+
+}
+
+.informacoes .site .car-service a:hover {
+    transform: translateY(-5px);
+    /* Move o link 5px para cima */
+    background-color: #4b4b4b;
+    color: var(--cor_amarelo);
 }
 
 
@@ -495,7 +631,7 @@ body {
 .servicos .site .background-text a,
 .time .site .background-text a,
 .blog .site .blog_lado div div a {
-    color: white;
+    color: rgb(187, 20, 20);
     font-weight: bold;
     font-size: 15pt;
 }
@@ -941,7 +1077,7 @@ body {
     margin-top: 90px;
     display: flex;
     justify-content: space-between;
-    flex-flow: row ;
+    flex-flow: row;
 }
 
 
@@ -952,7 +1088,7 @@ body {
 }
 
 
-.blog .site  .blog_lado  img{
+.blog .site .blog_lado img {
     width: 300px;
     height: 250px;
 }
@@ -979,74 +1115,75 @@ body {
     width: 100%;
 }
 
-footer .hr{
-    padding: 50px 0 ;
+footer .hr {
+    padding: 50px 0;
     background-color: var(--cor_card_img);
 }
 
-footer .hr .site hr{
-   border: 1px solid var(--cor_hr_footer);
+footer .hr .site hr {
+    border: 1px solid var(--cor_hr_footer);
 }
 
 
-footer .informacoes_footer{
+footer .informacoes_footer {
     background-color: var(--cor_card_img);
 }
 
-footer .informacoes_footer .site{
+footer .informacoes_footer .site {
     display: flex;
     justify-content: space-between;
 }
 
 
-footer .informacoes_footer .logo_footer{
+footer .informacoes_footer .logo_footer {
     width: 40%;
 }
 
-footer .informacoes_footer .logo_footer div:nth-child(1){
+footer .informacoes_footer .logo_footer div:nth-child(1) {
     width: 100%;
 }
 
 
 footer .informacoes_footer .logo_footer div:nth-child(1) p {
 
-color: var(--cor_branco_texto);
-margin: 30px 0 ;
+    color: var(--cor_branco_texto);
+    margin: 30px 0;
 
 }
 
 
-footer .informacoes_footer .logo_footer  .telefone_footer{
+footer .informacoes_footer .logo_footer .telefone_footer {
     display: flex;
 }
 
-footer .informacoes_footer .logo_footer  .telefone_footer .circulo_footer{
+footer .informacoes_footer .logo_footer .telefone_footer .circulo_footer {
 
-width: 50px;
-height: 50px;
-border-radius: 50%;
-background-color: var(--cor_vermelho_paleta);
-display: flex;
-justify-content: center;
-align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--cor_vermelho_paleta);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-footer .informacoes_footer .logo_footer  .telefone_footer .telefone_texto h3{
-font-size: 30pt;
-color: var(--cor_branco_texto);
-font-weight: bold;
-margin-left: 20px;
+footer .informacoes_footer .logo_footer .telefone_footer .telefone_texto h3 {
+    font-size: 30pt;
+    color: var(--cor_branco_texto);
+    font-weight: bold;
+    margin-left: 20px;
 }
 
 
-footer .informacoes_footer .site nav h4, footer .informacoes_footer .site .localizacao_footer h4  {
+footer .informacoes_footer .site nav h4,
+footer .informacoes_footer .site .localizacao_footer h4 {
     color: var(--cor_branco_texto);
     font-size: 20pt;
 }
 
 
-footer .informacoes_footer .site nav ul li{
-    margin: 20px 0 ;
+footer .informacoes_footer .site nav ul li {
+    margin: 20px 0;
 }
 
 footer .informacoes_footer .site nav ul li a {
@@ -1054,40 +1191,46 @@ footer .informacoes_footer .site nav ul li a {
 }
 
 
-footer .informacoes_footer  .site .localizacao_footer .contato_footer{
+footer .informacoes_footer .site .localizacao_footer .contato_footer {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
 
-footer .informacoes_footer .site .localizacao_footer h4{
-    margin: 0 0 20px 0 ;
+footer .informacoes_footer .site .localizacao_footer h4 {
+    margin: 0 0 20px 0;
 }
 
-footer .informacoes_footer  .site .localizacao_footer .contato_footer p{
+footer .informacoes_footer .site .localizacao_footer .contato_footer p {
     color: var(--cor_branco_texto);
     font-size: 10pt;
-    
-    margin-left: 10px ;
-   
+
+    margin-left: 10px;
+
 }
 
-footer .hr .site  hr{
+footer .hr .site hr {
     margin-bottom: 20px;
 }
 
-footer .hr .site .redes_footer{
+footer .hr .site .redes_footer {
     display: flex;
     justify-content: space-between;
 }
 
-footer .hr .site .redes_footer h2{
+footer .hr .site .redes_footer h2 {
     font-size: 15pt;
     font-weight: bold;
     color: var(--cor_branco_texto);
 }
 
-footer .hr .site .redes_footer div a{
-   
+footer .hr .site .redes_footer div a {
+
     margin-left: 10px;
+}
+
+
+
+slick-track {
+    width: 0px !important;
 }

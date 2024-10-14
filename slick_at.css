@@ -1,0 +1,41 @@
+:root {
+    --cor_de_fundo: #101010;
+    ;
+    --_cor_paragrafo: #BEBEBE;
+    --contraste_de_fundo: -webkit-text-stroke: 1px white;
+    --cor_vermelho_paleta: #822112;
+    --cor_branco_texto: #ffffff;
+    --cor_card_img: #0A0A0A;
+    --cor_preto_para_texto: ;
+    --cor_hr_footer: #260906;
+    --cor_dos_icones: rgb(212, 130, 1);
+    --cor_amarelo: #ffff00;1
+}
+
+
+
+
+.slick-next {
+
+    top: 90%;
+    right: 100px;
+    
+}
+
+.slick-prev{
+    left: 1600px;
+    z-index: 99;
+    top: 90%;
+}
+
+.slick-prev:before, .slick-next:before{
+
+
+    font-size: 45px;
+    color: var(--cor_branco_texto);
+    background-color: #ffff00;
+    border-radius: 20%;
+    color: #0A0A0A;
+    padding: 0 20px;
+}
+
