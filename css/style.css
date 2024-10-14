@@ -34,7 +34,7 @@ body {
 } */
 
 
- .banner_um , .banner_dois {
+ .banner_um {
 
     background-image: url(../material_do_site/img/hero_slider_bg_1.png);
     height: 1000px;
@@ -47,7 +47,11 @@ body {
 /* imagens dos carrosel de fundo  */
 
 .banner_dois{
-    background-image: url(../material_do_site/img/hero_slider_bg_2.png) !important;
+    background-image: url(../material_do_site/img/hero_slider_bg_2.png) ;
+    height: 1000px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
     
 }
 
