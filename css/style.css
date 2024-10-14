@@ -34,7 +34,7 @@ body {
 } */
 
 
-.imagem_fundo {
+ .banner_um , .banner_dois {
 
     background-image: url(../material_do_site/img/hero_slider_bg_1.png);
     height: 1000px;
@@ -42,6 +42,23 @@ body {
     background-position: top center;
     background-size: cover;
 }
+
+
+/* imagens dos carrosel de fundo  */
+
+.banner_dois{
+    background-image: url(../material_do_site/img/hero_slider_bg_2.png) !important;
+    
+}
+
+/* .banner_dois{
+    background-image: url(../material_do_site/img/hero_three_slider_bg_1.png);
+} */
+
+
+
+
+/* imagens dos carrosel de fundo  */
 
 .imagem_fundo header {
 
