@@ -6,44 +6,44 @@ body {
 
 @font-face {
     font-family: 'PACE';
-    src: url('/assets/fonts/pace-racing-car/PACE.woff2') format('woff2'),
-        url('/assets/fonts/pace-racing-car/PACE.woff') format('woff'),
-        url('/assets/fonts/pace-racing-car/PACE.ttf') format('truetype'),
-        url('/assets/fonts/pace-racing-car/PACE.otf') format('opentype');
+    src: url('../material_do_site/fonts/PACE.woff2') format('woff2'),
+        url('../material_do_site/fonts/PACE-Italic.woff') format('woff'),
+        url('../material_do_site/fonts/PACE.ttf') format('truetype'),
+        url('../material_do_site/fonts/PACE.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
- 
+
 @font-face {
     font-family: 'PACE Italic';
-    src: url('/assets/fonts/pace-racing-car/PACE-Italic.woff2') format('woff2'),
-        url('/assets/fonts/pace-racing-car/PACE-Italic.woff') format('woff'),
-        url('/assets/fonts/pace-racing-car/PACE-Italic.ttf') format('truetype'),
-        url('/assets/fonts/pace-racing-car/PACE-Italic.otf') format('opentype');
+    src: url('../material_do_site/fonts/PACE-Italic.woff2') format('woff2'),
+        url('../material_do_site/fonts/PACE-Italic.woff') format('woff'),
+        url('../material_do_site/fonts/PACE-Italic.ttf') format('truetype'),
+        url('../material_do_site/fonts/PACE-Italic.otf') format('opentype');
     font-weight: normal;
     font-style: italic;
 }
- 
+
 @font-face {
     font-family: 'Sofast';
-    src: url('/assets/fonts/sofast-racing-car/Sofast.woff2') format('woff2'),
-        url('/assets/fonts/sofast-racing-car/Sofast.woff') format('woff'),
-        url('/assets/fonts/sofast-racing-car/Sofast.ttf') format('truetype'),
-        url('/assets/fonts/sofast-racing-car/Sofast.otf') format('opentype');
+    src: url('../material_do_site/fonts/Sofast.woff2') format('woff2'),
+        url('../material_do_site/fonts/Sofast.woff') format('woff'),
+        url('../material_do_site/fonts/Sofast.ttf') format('truetype'),
+        url('../material_do_site/fonts/Sofast.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
- 
+
 @font-face {
     font-family: 'Sofast Italic';
-    src: url('/assets/fonts/sofast-racing-car/Sofast-Italic.woff2') format('woff2'),
-        url('/assets/fonts/sofast-racing-car/Sofast-Italic.woff') format('woff'),
-        url('/assets/fonts/sofast-racing-car/Sofast-Italic.ttf') format('truetype'),
-        url('/assets/fonts/sofast-racing-car/Sofast-Italic.otf') format('opentype');
+    src: url('../material_do_site/fonts/Sofast-Italic.woff2') format('woff2'),
+        url('../material_do_site/fonts/Sofast-Italic.woff') format('woff'),
+        url('../material_do_site/fonts/Sofast-Italic.ttf') format('truetype'),
+        url('../material_do_site/fonts/Sofast-Italic.otf') format('opentype');
     font-weight: normal;
     font-style: italic;
 }
- 
+
 
 
 :root {
@@ -59,8 +59,8 @@ body {
     --cor_dos_icones: rgb(212, 130, 1);
     --cor_amarelo: #ffff00;
     --texto_PACE: 'PACE';
-    --fontNoCorpo:"Sofast" ; 
-    --texto_PACE_italico: 'PACE Italic' ;
+    --fontNoCorpo: "Sofast";
+    --texto_PACE_italico: 'PACE Italic';
 }
 
 
@@ -72,7 +72,7 @@ body {
 
 .site {
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1400px;
     width: 100%;
 }
 
@@ -152,6 +152,12 @@ header img {
     justify-content: space-between;
 }
 
+
+.imagem_fundo header nav a {
+    color: white;
+}
+
+
 .imagem_fundo header nav ul {
     display: flex;
     flex-flow: row wrap;
@@ -160,13 +166,17 @@ header img {
 
 }
 
+.imagem_fundo header nav ul li a:hover{
+    color: var(--cor_amarelo);
+}
+
 .imagem_fundo header nav ul li a {
     color: white;
     margin-left: 20px;
-    font-size: 16pt;
+    font-size: 12pt;
     font-weight: 500;
     font-family: var(--fontNoCorpo);
-   
+
 }
 
 
@@ -246,14 +256,16 @@ header img {
 
 .imagem_fundo header .circulo_um .fa-solid {
     font-size: 26px;
+    color: white;
 
 }
 
 .imagem_fundo header .telefone .numero h2 {
-  
+
     font-weight: 900;
-    font-size: 17pt;
+    font-size: 13pt;
     font-family: var(--texto_PACE);
+    color: var(--cor_branco_texto);
 }
 
 
@@ -329,7 +341,7 @@ header img {
     color: white;
     font-size: 10pt;
     font-family: var(--texto_PACE);
-  
+
 }
 
 
@@ -345,7 +357,7 @@ header img {
     position: relative;
     gap: 10px;
     top: 50%;
-    left: -335px;
+    left: -250px;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -363,7 +375,7 @@ header img {
 .informacoes .site .redes_socias .fa-brands {
     height: 24px;
     width: 24px;
-    margin-left: 50px;
+    margin-left: 65px;
     align-self: flex-start;
     transform: rotate(-90deg);
     font-size: 15pt;
@@ -375,11 +387,12 @@ header img {
     color: white;
     transform: rotate(-90deg);
     margin-top: 122px;
-    margin-left: 26px;
+    margin-left: 19px;
     align-self: flex-start;
     text-align: start;
     font-weight: bold;
     font-size: 13pt;
+    font-family: 'PACE Italic';
 }
 
 
@@ -389,6 +402,7 @@ header img {
     margin-top: 90px;
     align-self: flex-start;
     border: 1px solid var(--cor_dos_icones);
+    margin-bottom: 20px;
 }
 
 
@@ -397,20 +411,21 @@ header img {
 }
 
 .informacoes .site .car-service h2 {
-    font-size: 50pt;
+    font-size: 30pt;
     font-weight: bold;
     color: white;
     margin-bottom: 15px;
-   font-family: var(--texto_PACE);
-   font-style: italic;
+    font-family: 'PACE Italic';
+    font-style: italic;
 }
 
 .informacoes .site .car-service p {
     font-size: 15pt;
     font-weight: 100;
-    color: #ffffffc2;
+    color: #ffffff;
     line-height: 30px;
     margin-bottom: 50px;
+    font-family: var(--fontNoCorpo);
 }
 
 
@@ -425,17 +440,19 @@ header img {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    font-family: var(--fontNoCorpo);
 
 }
 
-.informacoes .site .car-service a {
+.informacoes .site .car-service a,
+.descricao .site .background-text a {
     transition: transform 0.3s ease-in-out;
     /* Suaviza tanto na ida quanto na volta */
 
 }
 
-.informacoes .site .car-service a:hover {
+.informacoes .site .car-service a:hover,
+.descricao .site .background-text a:hover {
     transform: translateY(-5px);
     /* Move o link 5px para cima */
     background-color: #4b4b4b;
@@ -476,9 +493,10 @@ header img {
 }
 
 .number .site .numeros div p {
-    color: #000000;
+    color: transparent;
     font-size: 25pt;
-    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke: 1px var(--cor_amarelo);
+    font-family: var(--texto_PACE);
 
 }
 
@@ -523,14 +541,16 @@ header img {
 
 .servicos .site .servicos_container .servico_um .texto h4 {
 
-    font-size: 20pt;
+    font-size: 13pt;
+    font-family: var(--texto_PACE);
 }
 
 
 .servicos .site .servicos_container .servico_um .texto p {
-    font-size: 13pt;
-    color: rgba(255, 255, 255, 0.788);
+    font-size: 10pt;
+    color: rgb(255, 255, 255);
     line-height: 25px;
+    font-family: var(--fontNoCorpo);
 }
 
 
@@ -538,7 +558,7 @@ header img {
 .descricao {
     padding-top: 50px;
     background: var(--cor_de_fundo);
-    padding-bottom: 50px;
+    
 }
 
 .descricao .site .container_dois {
@@ -557,34 +577,64 @@ header img {
     position: relative;
 }
 
-
-.descricao .site .background-text::before,
-.servicos .background-text::before,
-.carrosel_avaliaçoes .site .background-text::before,
-.time .site .background-text::before,
-.blog .site .background-text::before {
-    content: "FEATURE";
-    position: absolute;
-    left: 0px;
-    z-index: 0;
-    font-size: 6vw;
-    color: rgba(255, 255, 255, 0.1);
-    /* Texto de fundo translúcido */
-    font-weight: bold;
-    pointer-events: none;
-    /* Impede interação com o texto de fundo */
-
-    /* bottom: -581px; */
+/* ---------------------------------------------ANIMAÇÃO DE FUNDO-----------------------------------------------------  */
+#tamanho_correto {
+    position: relative;
+    width: 100%;
+    height: 240px;
 }
 
+.texto_fundo {
+    z-index: 1;
+    opacity: 0.3;
+    position: relative;
+    text-align: center;
+    font-family: var(--texto_PACE);
+    font-size: 87px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    display: inline;
+    background: linear-gradient(to right, #222 0%, #fff 50%, #222 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animaTextoFundo 2.5s infinite alternate;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-color: rgba(46, 46, 46, 0.7960784314);
+    -ms-background-size: 200px 100%;
+    background-size: 200px 100%;
+    bottom: 255px;
+}
+
+
+@keyframes animaTextoFundo {
+
+    0% {
+        background-position: top left;
+    }
+
+    100% {
+        background-position: top right;
+    }
+
+}
+
+/* ---------------------------------------------ANIMAÇÃO DE FUNDO-----------------------------------------------------  */
 .descricao .site .background-text h5,
 .servicos .background-text h5,
 .carrosel_avaliaçoes .site .background-text h5,
 .time .site .background-text h5,
 .blog .site .background-text h5 {
     font-size: 30pt;
-    z-index: 1;
+    z-index: 2;
     position: relative;
+    text-transform: uppercase;
+    font-family: var(--texto_PACE);
+    color: var(--cor_amarelo);
+    animation: anima_fundo 2.5s infinite alternate;
 }
 
 
@@ -592,25 +642,34 @@ header img {
 .servicos .background-text p,
 .time .site .background-text p,
 .blog .site .background-text p {
-    color: var(--_cor_paragrafo);
+    color: var(--cor_branco_texto);
     font-size: 12pt;
-    line-height: 20px;
+    line-height: 33px;
     margin-top: 20px;
     z-index: 1;
     position: relative;
+    font-family: var(--fontNoCorpo);
+
 }
 
 
 .descricao .site .background-text h4,
 .servicos .background-text h4,
 .time .site .background-text h4 {
-    margin-top: 40px;
-    -webkit-text-stroke: 1px #d3d3d3;
+    -webkit-text-stroke: 1px var(--cor_amarelo);
     line-height: 70px;
-    color: #000000;
+    color: transparent;
     font-size: 26pt;
-    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    z-index: 9999;
+}
 
+.descricao .site .background-text h4:hover,
+.servicos .background-text h4:hover,
+.time .site .background-text h4:hover {
+    -webkit-text-stroke: 1px var(--cor_branco_texto);
 }
 
 
@@ -626,7 +685,7 @@ header img {
 }
 
 .servicos {
-    padding-top: 50px;
+   
     background-color: var(--cor_de_fundo);
 }
 
@@ -634,23 +693,40 @@ header img {
     display: flex;
 }
 
-.servicos .background-text::before {
 
-    content: "SERVICES";
+.servicos .site .total_servicos .background-text .texto_fundo{
+    bottom: -171px;
+    right: 30px;
+}
 
+.servicos .site .total_servicos .background-text h5{
+    position: relative;
+    font-size: 3em;
+    letter-spacing: 30px;
+    font-weight: 700;
+    font-style: normal;
+    color: #FFC107;
+   text-align: center;
 }
 
 
+.servicos .site .total_servicos .background-text h5 span{
+    position: absolute;
+    font-size: 4em;
+    color: var(--cor_branco_texto);
+    z-index: -5;
+    right: 260px;
+    bottom: -40px;
+}
 .servicos .site .background-text p {
-    margin-bottom: 50px;
-    margin-right: 25px;
+    margin: 50px 25px 50px 0;
 }
 
 
 .servicos .site .background-text a,
 .time .site .background-text a,
 .blog .site .blog_lado div div a {
-    color: rgb(187, 20, 20);
+   color: var(--cor_amarelo);
     font-weight: bold;
     font-size: 15pt;
 }
@@ -665,11 +741,11 @@ header img {
     width: 20%;
     height: 2px;
     left: 0;
-    bottom: -20px;
+    bottom: -420px;
     opacity: 1;
     background-color: #4f4836;
     transition: all 0.5s;
-    background-color: var(--cor_vermelho_paleta);
+    background-color: var(--cor_amarelo);
 }
 
 
@@ -723,21 +799,25 @@ header img {
 
 .servicos .site .total_servicos .card_service .descricao_servico .servico_um {
     color: var(--cor_branco_texto);
-    font-size: 28px;
+    font-size: 22px;
     font-weight: bold;
+    font-family: var(--fontNoCorpo);
 }
 
+
+
 .servicos .site .total_servicos .card_service .descricao_servico .servico_um:hover {
-    color: var(--cor_vermelho_paleta);
+    color: var(--cor_amarelo);
     transition: 0.5s;
 }
 
 
 .servicos .site .total_servicos .card_service .descricao_servico p {
-    color: var(--_cor_paragrafo);
+   color: var(--cor_branco_texto);
     font-size: 12pt;
     margin: 12px 0 55px;
     line-height: 25px;
+    font-family: var(--fontNoCorpo);
 }
 
 .servicos .site .total_servicos .card_service .descricao_servico .hr_servico,
@@ -749,6 +829,12 @@ header img {
     min-width: 100px;
     text-transform: uppercase;
     margin-bottom: 6px;
+    font-family: var(--fontNoCorpo);
+}
+
+
+.servicos .site .total_servicos .card_service .descricao_servico .hr_servico:hover{
+    color: var(--cor_amarelo);
 }
 
 .servicos .site .total_servicos .card_service .descricao_servico .hr_servico::after {
@@ -762,7 +848,7 @@ header img {
     opacity: 1;
     background-color: #4f4836;
     transition: all 0.5s;
-    background-color: var(--cor_vermelho_paleta);
+    background-color: var(--cor_amarelo);
 }
 
 
@@ -848,9 +934,10 @@ header img {
 
 .letreiro .site .redes div:nth-child(1) {
     display: flex;
-    font-size: 62pt;
-    -webkit-text-stroke: 3px #ff3d24;
-
+    font-size: 55pt;
+    -webkit-text-stroke: 1px var(--cor_amarelo);
+    color: transparent;
+font-family: var(--fontNoCorpo);
     justify-content: center;
 }
 
@@ -862,13 +949,14 @@ header img {
 
 .letreiro .site .redes div:nth-child(2) p {
 
-    font-size: 24pt;
+    font-size: 17pt;
     color: var(--cor_branco_texto);
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
     -webkit-text-stroke: none;
     margin-top: 15px;
+    font-family: var(--fontNoCorpo);
 }
 
 .carrosel_parceiros {
