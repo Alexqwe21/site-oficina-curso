@@ -978,11 +978,23 @@ font-family: var(--fontNoCorpo);
 
 .carrosel_parceiros .site .carrosel {
     display: flex;
-    /* justify-content: space-between; */
-    width: 100% !important;
+    justify-content: space-between;
+   
+}
+
+.carrosel_parceiros .site .carrosel div{
+    
+    display: flex;
+    justify-content: space-between;
+    margin: 0 30px;
 }
 
 
+.carrosel_parceiros .site .carrosel div img{
+      
+    margin: 0 30px;   
+   
+}
 
 
 .carrosel_avaliaçoes {
