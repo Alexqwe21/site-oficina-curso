@@ -166,7 +166,7 @@ header img {
 
 }
 
-.imagem_fundo header nav ul li a:hover{
+.imagem_fundo header nav ul li a:hover {
     color: var(--cor_amarelo);
 }
 
@@ -504,6 +504,7 @@ header img {
 .servicos {
 
     background: #101010;
+    padding-bottom: 50px;
 
 }
 
@@ -558,7 +559,7 @@ header img {
 .descricao {
     padding-top: 50px;
     background: var(--cor_de_fundo);
-    
+
 }
 
 .descricao .site .container_dois {
@@ -675,6 +676,7 @@ header img {
 
 .descricao .site .colaborador {
     width: 50%;
+    height: 720px;
 }
 
 
@@ -685,7 +687,7 @@ header img {
 }
 
 .servicos {
-   
+
     background-color: var(--cor_de_fundo);
 }
 
@@ -694,23 +696,23 @@ header img {
 }
 
 
-.servicos .site .total_servicos .background-text .texto_fundo{
+.servicos .site .total_servicos .background-text .texto_fundo {
     bottom: -171px;
     right: 30px;
 }
 
-.servicos .site .total_servicos .background-text h5{
+.servicos .site .total_servicos .background-text h5 {
     position: relative;
     font-size: 3em;
     letter-spacing: 30px;
     font-weight: 700;
     font-style: normal;
     color: #FFC107;
-   text-align: center;
+    text-align: center;
 }
 
 
-.servicos .site .total_servicos .background-text h5 span{
+.servicos .site .total_servicos .background-text h5 span {
     position: absolute;
     font-size: 4em;
     color: var(--cor_branco_texto);
@@ -718,6 +720,7 @@ header img {
     right: 260px;
     bottom: -40px;
 }
+
 .servicos .site .background-text p {
     margin: 50px 25px 50px 0;
 }
@@ -726,7 +729,7 @@ header img {
 .servicos .site .background-text a,
 .time .site .background-text a,
 .blog .site .blog_lado div div a {
-   color: var(--cor_amarelo);
+    color: var(--cor_amarelo);
     font-weight: bold;
     font-size: 15pt;
 }
@@ -771,12 +774,14 @@ header img {
     background-color: var(--cor_card_img);
 }
 
-.servicos .site .total_servicos .card_service img {
+.servicos .site .total_servicos .card_service img,
+.blog .site .blog_lado img {
     transition: transform 0.5s ease;
     transform-origin: center;
 }
 
-.servicos .site .total_servicos .card_service img:hover {
+.servicos .site .total_servicos .card_service img:hover,
+.blog .site .blog_lado img:hover {
     transform: scale(1.1)
 }
 
@@ -813,7 +818,7 @@ header img {
 
 
 .servicos .site .total_servicos .card_service .descricao_servico p {
-   color: var(--cor_branco_texto);
+    color: var(--cor_branco_texto);
     font-size: 12pt;
     margin: 12px 0 55px;
     line-height: 25px;
@@ -833,7 +838,7 @@ header img {
 }
 
 
-.servicos .site .total_servicos .card_service .descricao_servico .hr_servico:hover{
+.servicos .site .total_servicos .card_service .descricao_servico .hr_servico:hover {
     color: var(--cor_amarelo);
 }
 
@@ -871,44 +876,82 @@ header img {
 
 
 .video {
-    position: relative;
+    /* position: relative; */
     /* Para controlar o posicionamento do contêiner */
-    width: 99vw;
+    /* width: 99vw; */
     /* 100% da largura da viewport */
-    height: 66vh;
+    /* height: 66vh; */
     /* 100% da altura da viewport */
-    overflow: hidden;
+    /* overflow: hidden; */
     /* Esconde qualquer parte do vídeo que saia do contêiner */
-    background-color: var(--cor_de_fundo);
+    /* background-color: var(--cor_de_fundo); */
+
+
+    height: 650px;
+    width: 100%;
+    overflow: hidden;
 }
 
-.video div {
-    position: absolute;
+.video a {
+    /* position: absolute; */
     /* Para cobrir todo o contêiner */
-    top: 0;
-    left: 0;
-    width: 100%;
+    /* top: 0; */
+    /* left: 0; */
+    /* width: 100%; */
     /* O contêiner ocupa 100% da largura */
-    height: 90%;
+    /* height: 90%; */
     /* O contêiner ocupa 100% da altura */
+
+
+    background-image: url(../material_do_site/img/car_video_bg.jpg);
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
 }
 
-.video div video {
-    position: absolute;
+.video .btn {
+    /* position: absolute; */
     /* Para cobrir todo o contêiner */
-    top: 50%;
+    /* top: 50%; */
     /* Centraliza verticalmente */
-    left: 50%;
+    /* left: 50%; */
     /* Centraliza horizontalmente */
-    width: 100%;
+    /* width: 100%; */
     /* Largura automática para manter a proporção */
-    height: 700px;
+    /* height: 700px; */
     /* Altura automática para manter a proporção */
 
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     /* Centraliza o vídeo */
-    object-fit: cover;
+    /* object-fit: cover; */
     /* Faz com que o vídeo cubra a área sem distorção */
+
+    position: relative;
+    z-index: 999999;
+    cursor: pointer;
+    top: 45%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    background-color: var(--cor_amarelo);
+    justify-content: center;
+}
+
+.video .btn span {
+    display: block;
+    position: relative;
+    z-index: 3;
+    width: 0;
+    height: 0;
+    border-left: 26px solid currentColor;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    color: #fff;
 }
 
 
@@ -937,7 +980,7 @@ header img {
     font-size: 55pt;
     -webkit-text-stroke: 1px var(--cor_amarelo);
     color: transparent;
-font-family: var(--fontNoCorpo);
+    font-family: var(--fontNoCorpo);
     justify-content: center;
 }
 
@@ -979,21 +1022,21 @@ font-family: var(--fontNoCorpo);
 .carrosel_parceiros .site .carrosel {
     display: flex;
     justify-content: space-between;
-   
+
 }
 
-.carrosel_parceiros .site .carrosel div{
-    
+.carrosel_parceiros .site .carrosel div {
+
     display: flex;
     justify-content: space-between;
     margin: 0 30px;
 }
 
 
-.carrosel_parceiros .site .carrosel div img{
-      
-    margin: 0 30px;   
-   
+.carrosel_parceiros .site .carrosel div img {
+
+    margin: 0 30px;
+
 }
 
 
@@ -1002,28 +1045,42 @@ font-family: var(--fontNoCorpo);
     background-color: var(--cor_de_fundo);
 }
 
+
+.carrosel_avaliaçoes .site .texto_fundo {
+    top: 115px;
+    font-size: 75pt;
+}
+
 .carrosel_avaliaçoes .site .clientes {
     background-color: var(--cor_card_img);
     height: 500px;
+    display: flex;
 }
 
-.carrosel_avaliaçoes .site .background-text::before {
-    content: " AVALIAÇÕES ";
-}
+
 
 .carrosel_avaliaçoes .site .background-text {
     margin-bottom: 75px;
 }
 
 .carrosel_avaliaçoes .site .clientes {
-    display: flex;
+
     align-items: center;
     /* flex-flow: row wrap; */
 }
 
 .carrosel_avaliaçoes .site .clientes .avl {
-    width: 50%;
+    width: 74%;
     margin-left: 50px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.slide_depo {
+    display: flex;
 }
 
 .carrosel_avaliaçoes .site .clientes .avl div:nth-child(1) {
@@ -1031,7 +1088,10 @@ font-family: var(--fontNoCorpo);
     justify-content: space-between;
     align-items: center;
     height: 65px;
+    position: absolute;
+    bottom: 360px;
 }
+
 
 .carrosel_avaliaçoes .site .clientes .avl div:nth-child(1) h3 {
 
@@ -1040,54 +1100,56 @@ font-family: var(--fontNoCorpo);
     font-weight: 700;
     line-height: normal;
     font-style: normal;
+    font-family: var(--texto_PACE);
 
 
 }
 
 .carrosel_avaliaçoes .site .clientes .avl div:nth-child(1) .fa-solid {
     font-size: 70pt;
-    color: var(--cor_vermelho_paleta);
+    color: var(--cor_amarelo);
+    margin-left: 50px;
 }
 
 
 .carrosel_avaliaçoes .site .clientes .avl div:nth-child(2) p {
-    color: var(--_cor_paragrafo);
+    color: var(--cor_branco_texto);
     font-size: 15pt;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    font-family: var(--fontNoCorpo);
+    margin-top: 100px;
 }
 
 .carrosel_avaliaçoes .site .clientes .avl div:nth-child(2) h4 {
-    font-size: 22pt;
+    font-size: 15pt;
     color: var(--cor_branco_texto);
     font-style: italic;
     font-weight: 500;
-    line-height: 125%;
+    line-height: 35px;
+    font-family: var(--fontNoCorpo);
 }
 
 
-.carrosel_avaliaçoes .site .clientes .imagem_avaliação {
-    position: absolute;
-}
 
-.carrosel_avaliaçoes .site .clientes .imagem_avaliação .fundo {
+.imagem_avaliação {
+    width: 27%;
     position: relative;
-    left: 206px;
-    bottom: -40px;
-
+    left: -642px;
 }
 
 .carrosel_avaliaçoes .site .clientes .imagem_avaliação .img_pessoa {
 
     position: relative;
-    left: 691px;
+    left: 652px;
     z-index: 1;
     top: 12px;
 }
 
 
 .time {
-    padding: 50px 0;
+    padding: 50px 0 0 0;
     background-color: var(--cor_de_fundo);
+    height: 350px;
 }
 
 
@@ -1096,8 +1158,13 @@ font-family: var(--fontNoCorpo);
     justify-content: space-between;
 }
 
+
 .time .site .background-text {
-    width: 20%;
+    width: 30%;
+}
+
+.time .site .time_lado_a_lado .background-text .texto_fundo {
+    bottom: 350px;
 }
 
 
@@ -1105,14 +1172,10 @@ font-family: var(--fontNoCorpo);
     margin-bottom: 30px;
 }
 
-.time .site .background-text::before {
-
-    content: "TIME";
-}
 
 .time .site .background-text a::after {
 
-    bottom: 90px;
+    bottom: 120px;
 
 }
 
@@ -1179,14 +1242,49 @@ font-family: var(--fontNoCorpo);
     text-transform: uppercase;
 }
 
+
+
+
+
+.equipe-info-social {
+    opacity: 0;
+    position: relative;
+    top: 188px;
+    left: 245px;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+
+.equipe-info-social:not(:hover) {
+    animation: slideOutLeft 0.5s forwards;
+
+}
+
+.equipeFoto {
+    position: relative;
+    width: 280px;
+    height: 300px;
+    max-width: 100%;
+    max-height: 100%;
+    background-repeat: no-repeat;
+    margin: 0 10px;
+}
+
+
 .blog {
-    padding: 50px 0;
+
     background-color: var(--cor_de_fundo);
 }
 
-.blog .site .background-text::before {
-    content: "BLOG";
+
+.blog .site .texto_fundo {
+    top: 150px;
 }
+
 
 .blog .site .blog_noticia h5 {
     text-align: center;
@@ -1195,6 +1293,7 @@ font-family: var(--fontNoCorpo);
     z-index: 1;
     position: relative;
     color: var(--cor_branco_texto);
+    font-family: var(--texto_PACE);
 }
 
 
@@ -1210,6 +1309,7 @@ font-family: var(--fontNoCorpo);
 .blog .site .blog_lado div p {
     color: var(--cor_branco_texto);
     margin: 20px 0;
+    font-family: var(--texto_PACE_italico);
 }
 
 
@@ -1221,7 +1321,8 @@ font-family: var(--fontNoCorpo);
 
 .blog .site .blog_lado div a {
     color: var(--cor_branco_texto);
-    font-size: 21px;
+    font-size: 17px;
+    font-family: var(--fontNoCorpo);
 
 }
 
@@ -1304,6 +1405,7 @@ footer .informacoes_footer .site nav h4,
 footer .informacoes_footer .site .localizacao_footer h4 {
     color: var(--cor_branco_texto);
     font-size: 20pt;
+    font-family: var(--texto_PACE);
 }
 
 
@@ -1313,6 +1415,7 @@ footer .informacoes_footer .site nav ul li {
 
 footer .informacoes_footer .site nav ul li a {
     color: var(--cor_branco_texto);
+    font-family: var(--fontNoCorpo);
 }
 
 

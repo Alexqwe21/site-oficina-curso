@@ -51,4 +51,20 @@
         width: 162px !important;
     } */
 
+
+
+    .carrosel_avaliaçoes .slick-next{
+        top: -27%;
+        right: 180px;
+        
+    }
+
+    .carrosel_avaliaçoes  .slick-prev{
+
+    left: 1000px;
+    z-index: 99;
+    top: -27%;
+   
+    }
+
     
