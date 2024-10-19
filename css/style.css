@@ -1041,7 +1041,7 @@ header img {
 
 
 .carrosel_avaliaçoes {
-    padding: 100px 0;
+  padding-bottom: 50px;
     background-color: var(--cor_de_fundo);
 }
 
@@ -1210,7 +1210,7 @@ header img {
 .time .site .time_lado_a_lado .colaboradores_dois .time_informacao {
     position: relative;
     width: 185px;
-    height: 100px;
+    height: 120px;
     background-color: var(--cor_card_img);
     left: 34px;
     top: 240px;
@@ -1240,6 +1240,24 @@ header img {
     text-align: center;
     margin-top: 20px;
     text-transform: uppercase;
+}
+
+
+.colaboradores .time_informacao .time_redes ,.colaboradores_um .time_informacao .time_redes , .colaboradores_dois .time_informacao .time_redes {
+
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.colaboradores .time_informacao .time_redes .fa-brands, .colaboradores_um .time_informacao .time_redes .fa-brands, .colaboradores_dois .time_informacao .time_redes .fa-brands{
+    color: var(--cor_branco_texto);
+}
+
+
+.colaboradores .time_informacao .time_redes .fa-brands:hover, .colaboradores_um .time_informacao .time_redes .fa-brands:hover, .colaboradores_dois .time_informacao .time_redes .fa-brands:hover {
+
+    color: var(--cor_amarelo);
 }
 
 
@@ -1278,6 +1296,7 @@ header img {
 .blog {
 
     background-color: var(--cor_de_fundo);
+    padding-bottom: 40px;
 }
 
 
@@ -1374,7 +1393,9 @@ footer .informacoes_footer .logo_footer div:nth-child(1) p {
 
     color: var(--cor_branco_texto);
     margin: 30px 0;
-
+    font-family: var(--fontNoCorpo);
+font-size: 12pt;
+line-height: 30px;
 }
 
 
@@ -1387,17 +1408,29 @@ footer .informacoes_footer .logo_footer .telefone_footer .circulo_footer {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: var(--cor_vermelho_paleta);
+  background-color: var(--cor_amarelo);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+footer .informacoes_footer .logo_footer div .logo-kioficina{
+    width: 200px;
+    height: 130px;
+}
+
+
+footer .informacoes_footer .logo_footer .telefone_footer .telefone_texto {
+    display: flex;
+    align-items: center;
+}
+
 footer .informacoes_footer .logo_footer .telefone_footer .telefone_texto h3 {
-    font-size: 30pt;
+    font-size: 20pt;
     color: var(--cor_branco_texto);
     font-weight: bold;
     margin-left: 20px;
+    font-family: var(--texto_PACE);
 }
 
 
@@ -1431,8 +1464,8 @@ footer .informacoes_footer .site .localizacao_footer h4 {
 
 footer .informacoes_footer .site .localizacao_footer .contato_footer p {
     color: var(--cor_branco_texto);
-    font-size: 10pt;
-
+    font-size: 8pt;
+font-family: var(--fontNoCorpo);
     margin-left: 10px;
 
 }
@@ -1450,6 +1483,7 @@ footer .hr .site .redes_footer h2 {
     font-size: 15pt;
     font-weight: bold;
     color: var(--cor_branco_texto);
+    font-family: var(--texto_PACE);
 }
 
 footer .hr .site .redes_footer div a {
